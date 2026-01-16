@@ -1,10 +1,12 @@
 import { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import PageHero from '../components/PageHero';
 import Section from '../components/Section';
 import { CONCERTS } from '../data/concerts';
 
 function Concerts() {
   const [loading, setLoading] = useState(true);
+  const navigate = useNavigate();
 
   useEffect(() => {
     // Simulate loading
@@ -104,9 +106,7 @@ function Concerts() {
                     </p>
 
                     <button
-                      onClick={() =>
-                        (window.location.hash = `concert-detail-${concert.id}`)
-                      }
+                      onClick={() => navigate(`/concert/${concert.id}`)}
                       className="inline-block px-6 py-3 bg-black dark:bg-white text-white dark:text-black font-semibold rounded-lg hover:bg-gray-800 dark:hover:bg-gray-200 transition-all"
                     >
                       Detayları Gör

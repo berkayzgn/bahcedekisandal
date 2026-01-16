@@ -1,17 +1,19 @@
 import { useState, useEffect } from 'react';
+import { useParams } from 'react-router-dom';
 import PageHero from '../components/PageHero';
 import Section from '../components/Section';
 import { CONCERTS } from '../data/concerts';
 
 function ConcertDetail() {
+  const { id } = useParams();
   const [selectedConcert, setSelectedConcert] = useState(null);
 
   useEffect(() => {
-    const hash = window.location.hash.slice(1);
-    const id = parseInt(hash.split('-').pop());
-    const foundConcert = CONCERTS.find((c) => c.id === id) || CONCERTS[0];
+    const concertId = parseInt(id);
+    const foundConcert =
+      CONCERTS.find((c) => c.id === concertId) || CONCERTS[0];
     setSelectedConcert(foundConcert);
-  }, []);
+  }, [id]);
 
   if (!selectedConcert) {
     return (

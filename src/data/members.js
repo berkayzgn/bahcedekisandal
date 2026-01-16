@@ -31,12 +31,6 @@ export const MEMBERS = [
     status: 'former',
     image: '/images/members-img/SelminVocal.jpeg',
   },
-  // {
-  //   name: 'Selmin',
-  //   role: 'Solist',
-  //   status: 'former',
-  //   image: '/images/members-img/SelminVocal.jpg',
-  // },
 
   // Vokaller
   {
@@ -89,12 +83,12 @@ export const MEMBERS = [
   },
 
   // Keman
-  // {
-  //   name: 'Elif',
-  //   role: 'Keman',
-  //   status: 'former',
-  //   image: '/images/members-img/ElifDincerViolin.jpg',
-  // },
+  {
+    name: 'Elif',
+    role: 'Keman',
+    status: 'former',
+    image: '/images/members-img/ElifDViolin.jpeg',
+  },
   {
     name: 'Yıldız',
     role: 'Keman',
