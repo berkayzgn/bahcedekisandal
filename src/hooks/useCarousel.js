@@ -12,9 +12,7 @@ export const useCarousel = (
   autoPlayInterval = 3000,
   pauseResumeDelay = 10000
 ) => {
-  const [currentIndex, setCurrentIndex] = useState(
-    Math.floor(Math.random() * items.length)
-  );
+  const [currentIndex, setCurrentIndex] = useState(0);
   const [isFading, setIsFading] = useState(false);
   const [isAutoPlay, setIsAutoPlay] = useState(true);
   const [resumeTimer, setResumeTimer] = useState(null);
