@@ -120,6 +120,14 @@ export const MEMBERS = [
     image: '/images/members-img/RuyaViolin.jpg',
   },
 
+  // Çello
+  {
+    name: 'Şeyma',
+    role: 'Çello',
+    status: 'current',
+    image: '/images/members-img/SeymaCello.png',
+  },
+
   // Bas Gitar
   {
     name: 'Efekan',
