@@ -96,6 +96,12 @@ export const MEMBERS = [
     image: '/images/members-img/YıldızViolin.jpg',
   },
   {
+    name: 'İlayda',
+    role: 'Keman',
+    status: 'former',
+    image: '/images/members-img/IlaydaViolin.jpeg',
+  },
+  {
     name: 'Miray',
     role: 'Keman',
     status: 'current',
