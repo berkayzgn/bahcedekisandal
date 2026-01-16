@@ -25,6 +25,12 @@ export const MEMBERS = [
     status: 'former',
     image: '/images/members-img/TugbaCetinVocal.jpg',
   },
+   {
+    name: 'Selmin',
+    role: 'Solist',
+    status: 'former',
+    image: '/images/members-img/SelminVocal.jpeg',
+  },
   // {
   //   name: 'Selmin',
   //   role: 'Solist',
@@ -201,7 +207,7 @@ export const MEMBERS = [
   },
   // Klavye
   {
-    name: 'Elif Ecrin',
+    name: 'Ecrin Elif',
     role: 'Klavye',
     status: 'current',
     image: '/images/members-img/ElifEcrinKeyboard.jpg',
