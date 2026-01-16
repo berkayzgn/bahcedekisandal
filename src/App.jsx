@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { Routes, Route, useLocation, useNavigate } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Home from './pages/Home';
@@ -9,48 +9,37 @@ import Concerts from './pages/Concerts';
 import ConcertDetail from './pages/ConcertDetail';
 
 function App() {
-  const [currentPage, setCurrentPage] = useState('home');
+  const location = useLocation();
+  const routerNavigate = useNavigate();
 
-  // Simple client-side routing
-  useEffect(() => {
-    const handleHashChange = () => {
-      const hash = window.location.hash.replace(/^#\/?/, '') || 'home';
-      setCurrentPage(hash);
-    };
-
-    window.addEventListener('hashchange', handleHashChange);
-    handleHashChange(); // Initial load
-
-    return () => window.removeEventListener('hashchange', handleHashChange);
-  }, []);
-
-  const navigate = (page) => {
-    window.location.hash = `/${page}`;
+  // Get current page from pathname for Header component
+  const getPageFromPath = () => {
+    switch (location.pathname) {
+      case '/':
+        return 'home';
+      case '/about':
+        return 'about';
+      case '/members':
+        return 'members';
+      case '/videos':
+        return 'videos';
+      case '/concerts':
+        return 'concerts';
+      default:
+        if (location.pathname.startsWith('/concert/')) {
+          return 'concert-detail';
+        }
+        return 'home';
+    }
   };
 
-  const renderPage = () => {
-    switch (currentPage) {
-      case 'home':
-        return <Home />;
-      case 'about':
-        return <About />;
-      case 'members':
-        return <Members />;
-      case 'videos':
-        return <Videos />;
-      case 'concerts':
-        return <Concerts />;
-      case 'concert-detail-1':
-      case 'concert-detail-2':
-      case 'concert-detail-3':
-      case 'concert-detail-4':
-      case 'concert-detail-5':
-      case 'concert-detail-6':
-      case 'concert-detail-7':
-      case 'concert-detail-8':
-        return <ConcertDetail />;
-      default:
-        return <Home />;
+  const currentPage = getPageFromPath();
+
+  const navigate = (page) => {
+    if (page === 'home') {
+      routerNavigate('/');
+    } else {
+      routerNavigate(`/${page}`);
     }
   };
 
@@ -60,7 +49,14 @@ function App() {
         <div className="flex flex-1 justify-center px-4 sm:px-8 md:px-16 lg:px-24 xl:px-40 py-5">
           <div className="layout-content-container flex flex-col w-full flex-1">
             <Header currentPage={currentPage} onNavigate={navigate} />
-            {renderPage()}
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/members" element={<Members />} />
+              <Route path="/videos" element={<Videos />} />
+              <Route path="/concerts" element={<Concerts />} />
+              <Route path="/concert/:id" element={<ConcertDetail />} />
+            </Routes>
           </div>
         </div>
         <Footer />
