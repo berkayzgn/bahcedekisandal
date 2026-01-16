@@ -10,7 +10,7 @@ import { useState, useEffect } from 'react';
 export const useCarousel = (
   items,
   autoPlayInterval = 3000,
-  pauseResumeDelay = 10000
+  pauseResumeDelay = 5000
 ) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isFading, setIsFading] = useState(false);
@@ -47,7 +47,7 @@ export const useCarousel = (
     setResumeTimer(newTimer);
   };
 
-  const setFading = (value) => {
+  const setFadingValue = (value) => {
     setIsFading(value);
   };
 
@@ -59,7 +59,7 @@ export const useCarousel = (
       setTimeout(() => {
         goToNext();
         setIsFading(false);
-      }, autoPlayInterval / 2);
+      }, 350);
     }, autoPlayInterval);
 
     return () => clearInterval(interval);
@@ -73,6 +73,6 @@ export const useCarousel = (
     goToPrevious,
     goToIndex,
     pauseAutoPlay,
-    setFading,
+    setFading: setFadingValue,
   };
 };

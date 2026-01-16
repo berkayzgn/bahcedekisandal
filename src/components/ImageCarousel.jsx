@@ -3,8 +3,8 @@ import { CAROUSEL_SETTINGS, IMAGE_PATHS } from '../constants';
 import Container from './Container';
 
 function ImageCarousel() {
-  // Gallery klasöründeki tüm görseller
-  const images = [
+  // Gallery klasöründeki görseller
+  const galleryImages = [
     `${IMAGE_PATHS.GALLERY}/01.jpg`,
     `${IMAGE_PATHS.GALLERY}/02.jpg`,
     `${IMAGE_PATHS.GALLERY}/03.jpg`,
@@ -23,8 +23,8 @@ function ImageCarousel() {
     `${IMAGE_PATHS.BACKGROUNDS}/About.jpg`,
     `${IMAGE_PATHS.BACKGROUNDS}/Concerts.jpg`,
     `${IMAGE_PATHS.BACKGROUNDS}/Home.jpg`,
-    `${IMAGE_PATHS.BACKGROUNDS}/Videos.jpg`,
     `${IMAGE_PATHS.BACKGROUNDS}/Members.jpg`,
+    `${IMAGE_PATHS.BACKGROUNDS}/Videos.jpg`,
   ];
 
   const {
@@ -35,11 +35,7 @@ function ImageCarousel() {
     goToIndex,
     pauseAutoPlay,
     setFading,
-  } = useCarousel(
-    images,
-    CAROUSEL_SETTINGS.AUTO_PLAY_INTERVAL,
-    CAROUSEL_SETTINGS.PAUSE_RESUME_DELAY
-  );
+  } = useCarousel(galleryImages, CAROUSEL_SETTINGS.AUTO_PLAY_INTERVAL, 5000);
 
   return (
     <section className="w-full py-10 bg-gray-100 rounded-lg dark:bg-black">
@@ -56,14 +52,10 @@ function ImageCarousel() {
         <div className="relative max-w-4xl mx-auto">
           <div className="aspect-video rounded-2xl overflow-hidden shadow-2xl relative">
             <img
-              src={images[currentIndex]}
+              src={galleryImages[currentIndex]}
               alt={`Galeri görsel ${currentIndex + 1}`}
-              className="w-full h-full object-cover"
-            />
-            {/* Dark overlay for transition */}
-            <div
-              className={`absolute inset-0 bg-black transition-opacity duration-1000 ${
-                isFading ? 'opacity-100' : 'opacity-0'
+              className={`w-full h-full object-cover transition-opacity duration-700 ${
+                isFading ? 'opacity-30' : 'opacity-100'
               }`}
             />
 
@@ -75,7 +67,7 @@ function ImageCarousel() {
                 setTimeout(() => {
                   goToPrevious();
                   setFading(false);
-                }, CAROUSEL_SETTINGS.TRANSITION_DURATION);
+                }, 350);
               }}
               className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-black/75 text-white p-2 rounded-full transition-all z-10"
               title="Önceki görsel"
@@ -103,7 +95,7 @@ function ImageCarousel() {
                 setTimeout(() => {
                   goToNext();
                   setFading(false);
-                }, CAROUSEL_SETTINGS.TRANSITION_DURATION);
+                }, 350);
               }}
               className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-black/75 text-white p-2 rounded-full transition-all z-10"
               title="Sonraki görsel"
@@ -126,7 +118,7 @@ function ImageCarousel() {
 
           {/* Dots indicator */}
           <div className="flex justify-center mt-6 space-x-2">
-            {images.map((_, index) => (
+            {galleryImages.map((_, index) => (
               <button
                 key={index}
                 onClick={() => {
@@ -136,7 +128,7 @@ function ImageCarousel() {
                     setTimeout(() => {
                       goToIndex(index);
                       setFading(false);
-                    }, CAROUSEL_SETTINGS.TRANSITION_DURATION);
+                    }, 350);
                   }
                 }}
                 className={`w-3 h-3 rounded-full transition-all ${

@@ -1,5 +1,6 @@
 import PageHero from '../components/PageHero';
 import ImageCarousel from '../components/ImageCarousel';
+import SongOfTheDay from '../components/SongOfTheDay';
 import Section from '../components/Section';
 
 function Home() {
@@ -13,7 +14,7 @@ function Home() {
       />
 
       {/* About Section */}
-      <Section className="py-20 bg-white mb-20">
+      <Section className="py-20 bg-white mb-20 rounded-lg shadow-lg">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div>
             <h2 className="text-4xl md:text-5xl font-bold text-black dark:text-white mb-6">
@@ -43,6 +44,8 @@ function Home() {
       </Section>
       {/* Image Carousel Section */}
       <ImageCarousel />
+      {/* Song of the Day Section */}
+      <SongOfTheDay />
     </main>
   );
 }
