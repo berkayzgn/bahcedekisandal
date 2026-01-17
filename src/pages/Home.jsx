@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import PageHero from '../components/PageHero';
 import ImageCarousel from '../components/ImageCarousel';
 import SongOfTheDay from '../components/SongOfTheDay';
@@ -26,12 +27,12 @@ function Home() {
               <strong>İstanbulluoğlu Sosyal Bilimler Lisesi</strong>'nde kurulan
               grubumuz, öğrenciler ve müzik tutkunlarından oluşuyor.
             </p>
-            <a
-              href="#about"
+            <Link
+              to="/about"
               className="inline-block mt-6 text-black dark:text-white font-semibold hover:underline"
             >
               Daha Fazla Bilgi →
-            </a>
+            </Link>
           </div>
           <div className="relative">
             <img

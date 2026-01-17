@@ -172,6 +172,12 @@ export const MEMBERS = [
     status: 'current',
     image: '/images/members-img/KubraFlute.jpg',
   },
+  {
+    name: 'Ongun',
+    role: 'Yan Flüt',
+    status: 'former',
+    image: '/images/members-img/OngunFlute.jpeg',
+  },
   // Akordiyon
   {
     name: 'Ali',
@@ -187,6 +193,12 @@ export const MEMBERS = [
     status: 'former',
     image: '/images/members-img/ErcumentGuitar.jpg',
   },
+    {
+    name: 'Buğra',
+    role: 'Gitar',
+    status: 'former',
+    image: '/images/members-img/BugraGuitar.jpeg',
+    },
   {
     name: 'Defne',
     role: 'Gitar',
