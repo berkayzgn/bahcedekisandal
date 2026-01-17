@@ -1,8 +1,11 @@
+import { useState } from 'react';
 import { useCarousel } from '../hooks';
 import { CAROUSEL_SETTINGS, IMAGE_PATHS } from '../constants';
 import Container from './Container';
 
 function ImageCarousel() {
+  const [touchStart, setTouchStart] = useState(null);
+  const [touchEnd, setTouchEnd] = useState(null);
   // Gallery klasöründeki görseller
   const galleryImages = [
     `${IMAGE_PATHS.GALLERY}/01.jpg`,
@@ -37,6 +40,41 @@ function ImageCarousel() {
     setFading,
   } = useCarousel(galleryImages, CAROUSEL_SETTINGS.AUTO_PLAY_INTERVAL, 5000);
 
+  const handleTouchStart = (e) => {
+    setTouchStart(e.targetTouches[0].clientX);
+  };
+
+  const handleTouchEnd = (e) => {
+    setTouchEnd(e.changedTouches[0].clientX);
+    handleSwipe();
+  };
+
+  const handleSwipe = () => {
+    if (!touchStart || !touchEnd) return;
+
+    const distance = touchStart - touchEnd;
+    const isLeftSwipe = distance > 50;
+    const isRightSwipe = distance < -50;
+
+    if (isLeftSwipe) {
+      pauseAutoPlay();
+      setFading(true);
+      setTimeout(() => {
+        goToNext();
+        setFading(false);
+      }, 350);
+    }
+
+    if (isRightSwipe) {
+      pauseAutoPlay();
+      setFading(true);
+      setTimeout(() => {
+        goToPrevious();
+        setFading(false);
+      }, 350);
+    }
+  };
+
   return (
     <section className="w-full py-10 bg-gray-100 rounded-lg dark:bg-black">
       <Container>
@@ -50,7 +88,11 @@ function ImageCarousel() {
         </div>
 
         <div className="relative max-w-4xl mx-auto">
-          <div className="aspect-video rounded-2xl overflow-hidden shadow-2xl relative">
+          <div
+            className="aspect-video rounded-2xl overflow-hidden shadow-2xl relative cursor-grab active:cursor-grabbing"
+            onTouchStart={handleTouchStart}
+            onTouchEnd={handleTouchEnd}
+          >
             <img
               src={galleryImages[currentIndex]}
               alt={`Galeri görsel ${currentIndex + 1}`}
