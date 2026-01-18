@@ -125,6 +125,24 @@ export const MEMBERS = [
     status: 'current',
     image: '/images/members-img/RuyaViolin.jpg',
   },
+  {
+    name: 'Hande',
+    role: 'Keman',
+    status: 'former',
+    image: '/images/members-img/HandeViolin.jpeg',
+  },
+  {
+    name: 'Sena',
+    role: 'Keman',
+    status: 'former',
+    image: '/images/members-img/SenaViolin.jpeg',
+  },
+  {
+    name: 'Cemre',
+    role: 'Keman',
+    status: 'former',
+    image: '/images/members-img/CemreViolin.jpeg',
+  },
 
   // Çello
   {
