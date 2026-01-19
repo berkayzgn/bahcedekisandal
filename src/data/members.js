@@ -7,6 +7,12 @@ export const MEMBERS = [
     image: '/images/members-img/EmekKorayKaratekeChef.jpg',
   },
   // solistler
+   {
+    name: 'Seray',
+    role: 'Solist',
+    status: 'former',
+    image: '/images/members-img/SerayVocal.jpeg',
+  },
   {
     name: 'Berkay',
     role: 'Solist & Gitar',
@@ -25,6 +31,8 @@ export const MEMBERS = [
     status: 'former',
     image: '/images/members-img/TugbaCetinVocal.jpg',
   },
+  
+
    {
     name: 'Selmin',
     role: 'Solist',
