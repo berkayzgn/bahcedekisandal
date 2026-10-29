@@ -30,7 +30,7 @@ function ConcertDetail() {
       <PageHero
         title={selectedConcert.title}
         subtitle={selectedConcert.description}
-        backgroundImage="/images/backgrounds/Concerts.jpg"
+        backgroundImage="/images/backgrounds/Concerts.webp"
       />
 
       {/* Concert Selection */}

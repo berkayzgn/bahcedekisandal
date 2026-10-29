@@ -4,7 +4,7 @@ export const CONCERTS = [
     title: 'Ezginin Günlüğü Konseri',
     description: '',
     youtubeId: '',
-    thumbnail: '/images/backgrounds/EzgininGunlugu.jpg',
+    thumbnail: '/images/backgrounds/EzgininGunlugu.webp',
     date: '30 Mayıs 2017',
     location: '',
     repertoire: [
@@ -30,7 +30,7 @@ export const CONCERTS = [
     title: 'Yeni Türkü Konseri',
     description: '',
     youtubeId: '',
-    thumbnail: '/images/backgrounds/YeniTurku.jpg',
+    thumbnail: '/images/backgrounds/YeniTurku.webp',
     date: '8 Haziran 2018',
     location: '',
     repertoire: [
@@ -56,7 +56,7 @@ export const CONCERTS = [
     title: 'Fettah Can Konseri',
     description: '',
     youtubeId: '',
-    thumbnail: '/images/backgrounds/FettahCan.jpeg',
+    thumbnail: '/images/backgrounds/FettahCan.webp',
     date: '26 Haziran 2023',
     location: '',
     repertoire: [
@@ -85,7 +85,7 @@ export const CONCERTS = [
     title: 'Grup Gündoğarken Şarkılarını Birlikte Söyleyelim',
     description: '',
     youtubeId: 'EPymaXTtZFA',
-    thumbnail: '/images/backgrounds/Gundogarken.jpg',
+    thumbnail: '/images/backgrounds/Gundogarken.webp',
     date: '30 Mayıs 2019',
     location: '',
     repertoire: [
@@ -113,7 +113,7 @@ export const CONCERTS = [
     title: 'Ezginin Günlüğü Konseri',
     description: 'Ezginin Günlüğü şarkılarının seslendirildiği özel konser',
     youtubeId: 'SLgWx6zW7r0',
-    thumbnail: '/images/backgrounds/EzgininGunlugu2.jpg',
+    thumbnail: '/images/backgrounds/EzgininGunlugu2.webp',
     date: ' 27 Haziran 2024',
     location: '',
     repertoire: [
@@ -140,7 +140,7 @@ export const CONCERTS = [
     title: 'Leman Sam Konseri',
     description: '',
     youtubeId: '',
-    thumbnail: '/images/backgrounds/LemanSam.jpg',
+    thumbnail: '/images/backgrounds/LemanSam.webp',
     date: '1 Temmuz 2025',
     location: '',
     repertoire: [
@@ -164,7 +164,7 @@ export const CONCERTS = [
     title: 'Başucu Şarkıları Konseri',
     description: '',
     youtubeId: '',
-    thumbnail: '/images/backgrounds/Basucu.jpeg',
+    thumbnail: '/images/backgrounds/Basucu.webp',
     date: ' 29 Haziran 2022',
     location: '',
     repertoire: [

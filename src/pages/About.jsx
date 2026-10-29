@@ -7,7 +7,7 @@ function About() {
       <PageHero
         title="Hakkımızda"
         subtitle="Müzikle dolu bir yolculuk, samimiyet ve huzur dolu anlar..."
-        backgroundImage="/images/backgrounds/About.jpg"
+        backgroundImage="/images/backgrounds/About.webp"
       />
 
       {/* Biz Kimiz Section */}
@@ -45,7 +45,7 @@ function About() {
           </div>
           <div className="order-1 lg:order-2 flex justify-center">
             <img
-              src="/images/sbl-logo.jpg"
+              src="/images/sbl-logo.webp"
               alt="İstanbulluoğlu Sosyal Bilimler Lisesi Logo"
               className="w-64 h-64 md:w-80 md:h-80 object-contain rounded-full shadow-2xl"
             />

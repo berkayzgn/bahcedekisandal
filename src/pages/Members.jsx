@@ -44,7 +44,7 @@ function Members() {
       <PageHero
         title="Grup Üyeleri"
         subtitle="Geçmişten günümüze grubumuzun bir parçası olan değerli müzisyenler."
-        backgroundImage="/images/backgrounds/Members.jpg"
+        backgroundImage="/images/backgrounds/Members.webp"
       />
 
       {/* Filter Section */}

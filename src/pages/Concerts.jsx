@@ -61,7 +61,7 @@ function Concerts() {
       <PageHero
         title="Konserlerimiz"
         subtitle="Sahneye taşıdığımız müzik yolculuğumuzdan kareler"
-        backgroundImage="/images/backgrounds/Concerts.jpg"
+        backgroundImage="/images/backgrounds/Concerts.webp"
       />
 
       {/* Concerts Section */}

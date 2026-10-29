@@ -11,7 +11,7 @@ function Home() {
       <PageHero
         title="Bahçedeki Sandal"
         subtitle="Müzikle hayat bulan kocaman bir aile"
-        backgroundImage="/images/backgrounds/Home.jpg"
+        backgroundImage="/images/backgrounds/Home.webp"
       />
 
       {/* About Section */}
@@ -36,7 +36,7 @@ function Home() {
           </div>
           <div className="relative">
             <img
-              src="/images/sbl-logo.jpg"
+              src="/images/sbl-logo.webp"
               alt="Bahçedeki Sandal"
               className="rounded-full shadow-2xl w-32 h-32 md:w-48 md:h-48 object-cover mx-auto"
             />

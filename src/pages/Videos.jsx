@@ -189,7 +189,7 @@ function Videos() {
       <PageHero
         title="Videolar"
         subtitle="Bahçedeki Sandal'ın konserlerinden ve özel performanslarından videolar."
-        backgroundImage="/images/backgrounds/Videos.jpg"
+        backgroundImage="/images/backgrounds/Videos.webp"
       />
 
       {videoCategories.map((category, categoryIndex) => (

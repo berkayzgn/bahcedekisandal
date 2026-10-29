@@ -4,7 +4,7 @@ function Footer() {
       <div className="max-w-[960px] mx-auto flex flex-col items-center md:flex-row md:items-center md:justify-between gap-4">
         <div className="flex items-center gap-3">
           <img
-            src="/images/cat.png"
+            src="/images/cat.webp"
             alt="Bahçedeki Sandal Kedi Logo"
             className="h-20 w-auto"
           />

@@ -11,7 +11,7 @@ function Header({ currentPage, onNavigate }) {
         onClick={() => onNavigate('home')}
       >
         <img
-          src="/images/sandal-logo.png"
+          src="/images/sandal-logo.webp"
           alt="Bahçedeki Sandal Logo"
           className="h-16 sm:h-24 w-auto"
         />
